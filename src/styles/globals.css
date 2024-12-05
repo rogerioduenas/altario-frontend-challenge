@@ -1,6 +1,33 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --flat-dark: #000;
+  --flat-light: #fff;
+  --brand-primary: #540CFA;
+  --brand-secondary: #FC3832;
+  --gray-darkest: #0C1D31;
+  --gray-dark: #273444;
+  --gray-medium: #8492A6;
+  --gray-light: #C0CCDA;
+  --gray-lighter: #E5E9F2;
+  --gray-lightest: #F1F5F9;
+  --gradient-primary: linear-gradient(45deg, #9C09DB, #1C0FD7);
+  --gradient-secondary: linear-gradient(45deg, #F2C314, #FC3832);
+  --gradient-tertiary: linear-gradient(45deg, #32FBFC, #3214F2);
+  --font-size-h1: 60px;
+  --font-size-h2: 30px;
+  --font-size-h3: 20px;
+  --font-size-h4: 18px;
+  --font-size-body: 16px;
+  --font-size-caption: 16px;
+  --line-height: 1.5;
+  --line-height-h1: 1.2;
+  --line-height-h2: 1.2;
+  --line-height-h3: 1.5;
+  --line-height-h4: 1.5;
+  --line-height-body: 1.5;
+  --line-height-caption: 1.5;
+  --font-weight: 400;
+  --font-weight-bold: 600;
+  --font-weight-extraBold: 700
 }
 
 html,
@@ -10,9 +37,10 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--flat-dark);
+  background: var(--flat-light);
+  font-family: Poppins, sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
