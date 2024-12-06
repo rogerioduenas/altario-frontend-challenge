@@ -39,6 +39,7 @@ body {
 body {
   color: var(--flat-dark);
   background: var(--flat-light);
+  background: var(--flat-light);
   font-family: Poppins, sans-serif;
 
   -webkit-font-smoothing: antialiased;
