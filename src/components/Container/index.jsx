@@ -4,14 +4,15 @@ import { Box } from '@mui/material';
 import HeaderMenu from '@/components/HeaderMenu';
 import Hero from '@/components/Hero';
 import Features from '@/components/Features';
+import CarouselCatalog from '@/components/CarouselCatalog'
 
 function Container() {
-
   return (
     <Box className={styles.container}>
       <HeaderMenu />
       <Hero />
-      <Features/>
+      <Features />
+      <CarouselCatalog />
     </Box>
   );
 }
