@@ -4,7 +4,8 @@ import { Box } from '@mui/material';
 import HeaderMenu from '@/components/HeaderMenu';
 import Hero from '@/components/Hero';
 import Features from '@/components/Features';
-import CarouselCatalog from '@/components/CarouselCatalog'
+import CarouselCatalog from '@/components/CarouselCatalog';
+import Trailers from '@/components/Trailers'
 
 function Container() {
   return (
@@ -13,6 +14,7 @@ function Container() {
       <Hero />
       <Features />
       <CarouselCatalog />
+      <Trailers/>
     </Box>
   );
 }
