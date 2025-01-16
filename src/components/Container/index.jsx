@@ -1,14 +1,20 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
-import HeaderMenu from "@/components/HeaderMenu";
+import styles from './style.module.scss'
+import { Box } from '@mui/material';
+import HeaderMenu from '@/components/HeaderMenu';
+import Hero from '@/components/Hero';
+import Features from '@/components/Features';
+import CarouselCatalog from '@/components/CarouselCatalog';
+import Trailers from '@/components/Trailers'
 
 function Container() {
-  const theme = useTheme();
-
   return (
-    <Box>
-      <HeaderMenu/>
+    <Box className={styles.container}>
+      <HeaderMenu />
+      <Hero />
+      <Features />
+      <CarouselCatalog />
+      <Trailers/>
     </Box>
   );
 }
