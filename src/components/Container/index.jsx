@@ -6,7 +6,7 @@ import Features from '@/components/Features';
 import CarouselCatalog from '@/components/CarouselCatalog';
 import Trailers from '@/components/Trailers';
 import Community from '@/components/Community';
-
+import Footer from '@/components/Footer'
 function Container() {
   return (
     <Box>
@@ -16,6 +16,7 @@ function Container() {
       <CarouselCatalog />
       <Trailers/>
       <Community/>
+      <Footer/>
     </Box>
   );
 }
