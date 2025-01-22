@@ -72,6 +72,9 @@ function HeaderMenu(props) {
   return (
     <Box>
       <AppBar
+        sx={{
+          background: '#fff'
+        }}
         component="nav"
         className={styles.appBar}>
         <Toolbar
