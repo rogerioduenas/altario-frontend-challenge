@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import Link from "next/link";
 import MenuIcon from '@mui/icons-material/Menu';
+import AboutContext from '@/context/aboutContext';
 import styles from './style.module.scss';
 import {
   AppBar,
@@ -19,6 +20,7 @@ import {
 const navItems = ['Features', 'About Us'];
 
 function HeaderMenu(props) {
+  const { setAboutOpen } = useContext(AboutContext)
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -26,11 +28,19 @@ function HeaderMenu(props) {
     setMobileOpen((prevState) => !prevState);
   };
 
+  const handleClick = item => {
+    if (item === 'About Us') {
+      return setAboutOpen(true)
+    }
+    return setAboutOpen(false)
+  }
+
   const drawer = (
     <Box
       onClick={handleDrawerToggle}
       className={styles.drawer}>
       <img
+        onClick={() => setAboutOpen(false)}
         src="assets/images/logo.svg"
         alt="company logo"
         height="23px"
@@ -40,7 +50,8 @@ function HeaderMenu(props) {
         <Divider />
         {navItems.map((item) => (
           <ListItem key={item}>
-            <ListItemButton>
+            <ListItemButton
+              onClick={() => handleClick(item)}>
               <Link href={`#${item.toLowerCase()}`}>
                 <ListItemText primary={item} />
               </Link>
@@ -66,6 +77,7 @@ function HeaderMenu(props) {
         <Toolbar
           className={styles.toolbar}>
           <img
+            onClick={() => setAboutOpen(false)}
             src="assets/images/logo.svg"
             alt="company logo"
           />
@@ -80,11 +92,12 @@ function HeaderMenu(props) {
           <Box
             className={styles.navItems}
             sx={{ display: { xs: 'none', sm: 'flex' } }}>
-            {navItems.map((item) => (
+            {navItems.map((item, index) => (
               <Link
-                key={item}
+                key={index}
                 href={`#${item.toLowerCase()}`}>
                 <Button
+                  onClick={() => handleClick(item)}
                   className={styles.buttonItem}>
                   {item}
                 </Button>
