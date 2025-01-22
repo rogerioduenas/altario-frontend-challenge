@@ -2,6 +2,7 @@ import Head from "next/head";
 import { CssBaseline } from '@mui/material';
 import Container from "@/components/Container";
 import { Poppins } from 'next/font/google';
+import { AboutContextProvider } from '@/context/aboutContext';
 
 const mainFontFamily = Poppins({
   weight: ["400", "600", "700"],
@@ -20,7 +21,9 @@ export default function Home() {
       <CssBaseline />
       <div
         className={mainFontFamily.className}>
-        <Container />
+        <AboutContextProvider>
+          <Container />
+        </AboutContextProvider>
       </div>
     </>
   );
